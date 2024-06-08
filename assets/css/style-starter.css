@@ -5211,6 +5211,12 @@ a.badge-dark.focus {
   }
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0;
@@ -15134,6 +15140,28 @@ button.mfp-arrow {
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed!important;
+}
+
+#submitButton {
+  position: relative !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
 }
 
 .mfp-close {
